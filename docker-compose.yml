@@ -3,5 +3,7 @@ services:
   test_site:
     build: ./
     volumes:
-      - ./etc/apache2/:/etc/apache2/
-      - ./var/www/new_shop:/var/www/new_shop
+      - /etc/apache2/:/etc/apache2/
+      - .:/var/www/new_shop
+      - /etc/mysql:/etc/mysql
+      - /etc/phpmyadmin:/etc/phpmyadmin

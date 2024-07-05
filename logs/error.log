@@ -1,0 +1,1 @@
+[Fri Jul 05 16:20:07.183508 2024] [php:error] [pid 32248] [client ::1:57888] PHP Parse error:  syntax error, unexpected token ",", expecting ")" in /var/www/new_shop/db.php on line 10, referer: http://localhost:8090/
