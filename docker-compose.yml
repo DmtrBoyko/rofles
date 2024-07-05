@@ -1,25 +1,7 @@
 version: '3'
-
 services:
-    
-    mariadb:
-      image:mariadb
-      restart: always
-      environment:
-        MARIADB_ROOT_PASSWORD: 1234
-
-    adminer:
-      image: adminer
-      restart: always
-      ports:
-        - 8080:8080
-
-    web:
-      image: nginx
-      volumes:
-      - ./nginx.conf:/nginx.conf:ro
-      command: [nginx-debug, '-g', 'daemon off;']
-
-    php:
-      image: php
-      
+  test_site:
+    build: ./
+    volumes:
+      - ./etc/nginx/:/etc/nginx/
+      - ./var/www/new_shop:/var/www/new_shop
