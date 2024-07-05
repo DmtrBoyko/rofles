@@ -1,0 +1,114 @@
+body {
+    font-family: Lato, sans-serif;
+    background-color: black;
+    color: lightgrey;
+}
+button[type="submit"] {
+    background-color: #e54b4b;
+    color: white;
+    font-size: 18px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    margin-top: 5px;
+    font-weight: 500;
+    border: #e54b4b;
+}
+button[type="reset"] {
+    background-color: #e54b4b;
+    color: white;
+    font-size: 18px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    margin-top: 5px;
+    font-weight: 500;
+    border: #e54b4b;
+}
+
+.registration {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin: 200px;
+}
+.registration_input {
+    border-color: #e54b4b;
+    border-width: medium;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    width: 18%;
+    font-weight: 700;
+    background-color: lightgrey;
+}
+.menu {
+    text-align: right;
+    font-size: 25px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background-color: dimgrey;
+    padding: 35px;
+}
+.submenu {
+    display: none;
+}
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+li {
+    display: inline;
+    margin-left: 1em;
+    border-left: 1px solid white;
+    margin-right: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: #e54b4b;
+}
+
+a:hover {
+    color: darkorange;
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+    padding-left: 15px;
+
+}
+nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 180px;
+    background-color: dimgrey;
+}
+.accept\/reset {
+    margin-top: 20px;
+}
+.reg {
+    margin-left: 20px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background-color: yellow;
+    padding: 35px;
+}
+.log_in {
+    margin-left: 15px;
+    margin-right: 15px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background-color: yellow;
+    padding: 35px;
+}
+.reg\/log_in {
+    margin-left: 330px;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+}
+.name_of_the_site {
+    background-color: black;
+    margin-left: 50px;
+}
