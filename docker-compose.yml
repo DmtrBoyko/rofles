@@ -3,5 +3,5 @@ services:
   test_site:
     build: ./
     volumes:
-      - ./etc/nginx/:/etc/nginx/
+      - ./etc/apache2/:/etc/apache2/
       - ./var/www/new_shop:/var/www/new_shop
