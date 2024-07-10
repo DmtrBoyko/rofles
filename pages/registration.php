@@ -1,5 +1,4 @@
 <?php
-<form action="registration.php" method="post"></form>
 require_once ('db.php'); #подключаем базу данных
 $login = $_POST['login']; #получаем логин с помощью метода POST все как и снизу
 $email = $_POST['email'];
