@@ -23,9 +23,8 @@
     </nav>
 </header>
 <br>
-<form action="registration.php" method="post"></form>>
-    <div class="registration">
-        Придумайте логин: <br>
+<form class="registration" action="registration.php" method="post">
+	Придумайте логин: <br>
         <input class="registration_input" type="text" name="login" placeholder="Логин" required><br>
         Введите свою электронную почту:<br>
         <input class="registration_input" type="email" name="email" placeholder="Электронная почта" required><br>
@@ -41,7 +40,6 @@
                 Сбросить введенные данные
             </button>
         </div>
-    </div>
 </form>
 </body>
 </html>

@@ -9,7 +9,7 @@
     <header>
         <a class="name_of_the_site" href=""><h2>New_shop - найди всё, что хочешь</h2></a>
         <div class="reg/log_in">
-            <a class="reg" href="registration.html">Регистрация</a>
+            <a class="reg" href="register.php">Регистрация</a>
             <a class="log_in" href="registration.html">Личный кабинет</a>
         </div>
         <nav class="menu">

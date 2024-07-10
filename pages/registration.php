@@ -11,7 +11,7 @@ if (empty($login) || empty($password) || empty($reppswd) || empty($email)) {
     if ($password != $reppswd) {
         echo "Пароли не совпадают! Попробуйте снова!";
     } else {
-        $sql = "INSERT INTO 'users' (login, password, e-mail) VALUES ('$login', '$password', 'email')";
+        $sql = "INSERT INTO 'users' (e-mail, login, password) VALUES ('$email','$login', '$password')";
         if ($db_connect -> query($sql) == TRUE) {
             echo "Успешная регистрация";
         } else {
@@ -19,4 +19,4 @@ if (empty($login) || empty($password) || empty($reppswd) || empty($email)) {
         }
     }
 }
-
+?>
