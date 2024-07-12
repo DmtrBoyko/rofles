@@ -24,6 +24,7 @@
 </header>
 <br>
 <form class="registration" action="registration.php" method="post">
+	<p class="login_exists">Пользователь с данным логином уже зарегистрирован! Попробуйте придумать другой логин!</p>
 	Придумайте логин: <br>
         <input class="registration_input" type="text" name="login" placeholder="login" required><br>
         Введите свою электронную почту:<br>

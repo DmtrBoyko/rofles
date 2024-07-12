@@ -1,3 +1,4 @@
+
 body {
     font-family: Lato, sans-serif;
     background-color: black;
@@ -31,6 +32,7 @@ button[type="reset"] {
     margin: 200px;
 }
 .registration_input {
+    margin: auto;
     border-color: #e54b4b;
     border-width: medium;
     -moz-border-radius: 10px;
@@ -112,3 +114,12 @@ nav ul li ul {
     background-color: black;
     margin-left: 50px;
 }
+
+.login_exists { 
+    text-align: center;
+    color: red;
+    font-weight: 500;
+    padding-bot: 0px;
+    font-size:20px;
+}
+
