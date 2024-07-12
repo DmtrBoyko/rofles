@@ -1,35 +1,3 @@
-  GNU nano 7.2                                                                                                                   registration.php                                                                                                                    Modified
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
 //require_once ('db.php'); #подключаем базу данных
 $db_connect = mysqli_connect('localhost', 'root', '1234', 'RegUser');
@@ -51,12 +19,18 @@ if ($password != $reppswd) {
 }else{
     echo "Пароли совпадают";
     $login_check= "SELECT * FROM users WHERE login='$login'";
+    $email_check="SELECT * FROM users WHERE e_mail='$email'";
     echo "Проверка прошла";
     if (mysqli_num_rows(mysqli_query($db_connect, $login_check)) > 0) {
-        header("Location: register_failed.php");
+        header("Location: login_failed.php");
         echo "Логин уже занят";
-    }else{
+    }elseif(mysqli_num_rows(mysqli_query($db_connect, $email_check)) > 0) {
         echo "Логин не занят";
+//	$email_check="SELECT * FROM users WHERE e_mail='$email'";
+//	if (mysqli_num_rows(mysqli_query($db_connect, $email_check)) > 0) {
+	header("Location: email_failed.php");
+	echo "email уже занят";
+    }else{
         $insrt = "INSERT INTO users (e_mail, login, password) VALUES ('$email', '$login', '$password');";
         $result = mysqli_query($db_connect, $insrt);
         echo "Данные вставлены";

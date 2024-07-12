@@ -40,7 +40,7 @@ button[type="reset"] {
     background-color: lightgrey;
 }
 .menu {
-    text-align: right;
+    text-align: center;
     font-size: 25px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
@@ -111,4 +111,10 @@ nav ul li ul {
 .name_of_the_site {
     background-color: black;
     margin-left: 50px;
+}
+.login_failed {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
 }
