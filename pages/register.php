@@ -25,13 +25,13 @@
 <br>
 <form class="registration" action="registration.php" method="post">
 	Придумайте логин: <br>
-        <input class="registration_input" type="text" name="login" placeholder="Логин" required><br>
+        <input class="registration_input" type="text" name="login" placeholder="login" required><br>
         Введите свою электронную почту:<br>
-        <input class="registration_input" type="email" name="email" placeholder="Электронная почта" required><br>
+        <input class="registration_input" type="email" name="email" placeholder="email" required><br>
         Придумайте пароль:<br>
-        <input class="registration_input" type="password" name="password" placeholder="Пароль" required><br>
+        <input class="registration_input" type="password" name="password" placeholder="password" required><br>
         Повторите придуманный пароль:<br>
-        <input class="registration_input" type="password" name="reppswd" placeholder="Повторите пароль" required><br>
+        <input class="registration_input" type="password" name="reppswd" placeholder="reppswd" required><br>
         <div class="accept/reset"></div>
             <button type="submit">
                 Принять
