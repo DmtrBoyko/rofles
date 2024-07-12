@@ -1,3 +1,35 @@
+  GNU nano 7.2                                                                                                                   registration.php                                                                                                                    Modified
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php
 //require_once ('db.php'); #подключаем базу данных
 $db_connect = mysqli_connect('localhost', 'root', '1234', 'RegUser');
@@ -18,11 +50,17 @@ if ($password != $reppswd) {
     echo "Пароли не совпадают!";
 }else{
     echo "Пароли совпадают";
-//    if ("SELECT * FROM `users` WHERE `users`.`login` = '$login');" {
-//	
-    $insrt = "INSERT INTO users (e_mail, login, password) VALUES ('$email', '$login', '$password');";
-    $result = mysqli_query($db_connect, $insrt);
-    echo "Данные вставлены";
+    $login_check= "SELECT * FROM users WHERE login='$login'";
+    echo "Проверка прошла";
+    if (mysqli_num_rows(mysqli_query($db_connect, $login_check)) > 0) {
+        header("Location: register_failed.php");
+        echo "Логин уже занят";
+    }else{
+        echo "Логин не занят";
+        $insrt = "INSERT INTO users (e_mail, login, password) VALUES ('$email', '$login', '$password');";
+        $result = mysqli_query($db_connect, $insrt);
+        echo "Данные вставлены";
+    }
 }
 //if (empty($login) || empty($password) || empty($reppswd) || empty($email)) {
 //    echo "Заполните все поля!";
@@ -31,8 +69,8 @@ if ($password != $reppswd) {
 //        echo "Пароли не совпадают! Попробуйте снова!";
 //    } else {
 //        $sql = "INSERT INTO users (e-mail, login, password) VALUES (`$email`, `$login`, `$password`);";
-//	$result = mysqli_query($db_connect, $sql);
-//	if ($result) {
+//      $result = mysqli_query($db_connect, $sql);
+//      if ($result) {
 //        if ($db_connect -> query($sql) == TRUE) {
 //            echo "Успешная регистрация";
 //        } else {
@@ -41,3 +79,14 @@ if ($password != $reppswd) {
 //    }
 //}
 ?>
+
+
+
+
+
+
+
+
+
+
+
