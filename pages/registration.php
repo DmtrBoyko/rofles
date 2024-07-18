@@ -1,21 +1,17 @@
 <?php
-?php
 
 require_once 'db.php';
 
-try {
-    $pdo = new PDO($attr, $username, $passwd, $opts);
-}
-catch (PDOException $e) {
-    throw new PDOException($e->getMessage(), (int)$e->getCode());
-}
+//try {
+$pdo = new PDO($attr, $username, $passwd, $opts);
+//}
+//catch (PDOException $e) {
+//    throw new PDOException($e->getMessage(), (int)$e->getCode());
+//}
 
 
-
-
-
-$db_connect = mysqli_connect('localhost', 'root', '1234', 'RegUser');
-if (!$db_connect) {
+//$db_connect = mysqli_connect('localhost', 'root', '1234', 'RegUser');
+if (!$pdo) {
     die ('Подключиться не удалось'. mysqli_connect_error());
     echo "Не могу подключиться к базе данных";
 }else{
