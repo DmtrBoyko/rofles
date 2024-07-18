@@ -1,5 +1,19 @@
 <?php
-//require_once ('db.php'); #подключаем базу данных
+?php
+
+require_once 'db.php';
+
+try {
+    $pdo = new PDO($attr, $username, $passwd, $opts);
+}
+catch (PDOException $e) {
+    throw new PDOException($e->getMessage(), (int)$e->getCode());
+}
+
+
+
+
+
 $db_connect = mysqli_connect('localhost', 'root', '1234', 'RegUser');
 if (!$db_connect) {
     die ('Подключиться не удалось'. mysqli_connect_error());
@@ -36,31 +50,6 @@ if ($password != $reppswd) {
         echo "Данные вставлены";
     }
 }
-//if (empty($login) || empty($password) || empty($reppswd) || empty($email)) {
-//    echo "Заполните все поля!";
-//} else {
-//    if ($password != $reppswd) {
-//        echo "Пароли не совпадают! Попробуйте снова!";
-//    } else {
-//        $sql = "INSERT INTO users (e-mail, login, password) VALUES (`$email`, `$login`, `$password`);";
-//      $result = mysqli_query($db_connect, $sql);
-//      if ($result) {
-//        if ($db_connect -> query($sql) == TRUE) {
-//            echo "Успешная регистрация";
-//        } else {
-//            echo "Ошибка: " . $db_connect->error;
-//        }
-//    }
-//}
+
 ?>
-
-
-
-
-
-
-
-
-
-
 
