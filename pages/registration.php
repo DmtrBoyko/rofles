@@ -17,7 +17,12 @@ try {
 //    throw new PDOException($e->getMessage(), (int)$e->getCode());
 //}
 
+$login = $_POST['login']; #получаем логин с помощью метода POST все как и снизу
+$email = $_POST['email'];
+$password = $_POST['password'];
+$reppswd = $_POST['reppswd'];
 
+<<<<<<< HEAD
 //$db_connect = mysqli_connect('localhost', 'root', '1234', 'RegUser');
 //    if (require_once 'db.php') {
 //    die ('Подключиться не удалось'. mysqli_connect_error());
@@ -32,6 +37,8 @@ $password = $_POST['password'];
 $reppswd = $_POST['reppswd'];
 
 
+=======
+>>>>>>> 1059182 (Изменил регистрацию)
 if ($password != $reppswd) {
    echo "Пароли не совпадают!";
 }else{
@@ -39,6 +46,7 @@ if ($password != $reppswd) {
    $login_check =$pdo->query("SELECT COUNT(*) FROM users WHERE login='$login'");
    $number_of_logins = $login_check->fetchColumn();
    echo "$number_of_logins";
+<<<<<<< HEAD
    if ($nubmer_of_logins != 0) {
        echo "Данный логин уже занят другим пользователем! Придумайте другой логин. ";
    }else{
@@ -60,6 +68,25 @@ if ($password != $reppswd) {
 	echo "Логин занят";
     }else{
 	echo "Логин свободен" }
+=======
+   if ($number_of_logins != 0) {
+       echo "Данный логин уже занят другим пользователем! Придумайте другой логин. ";
+   }else{
+       echo "Данный логин свободен!";
+       $email_check=$pdo->query("SELECT COUNT(*) FROM users WHERE e_mail='$email'");
+       $number_of_emails = $email_check->fetchColumn();
+       echo "$number_of_emails";
+       if ($number_of_emails !=0 ) {
+           echo "Данный e-mail уже занят!";
+       }else{
+	   $insrt = "INSERT INTO users (e_mail, login, password) VALUES ('$email', '$login', '$password');";
+           $result = $pdo->query($insrt);
+           echo "Данные вставлены";
+       }
+   }
+} 
+/*	echo "Логин свободен" }
+>>>>>>> 1059182 (Изменил регистрацию)
 } 
         header("Location: login_failed.php");
         echo "Логин уже занят";
